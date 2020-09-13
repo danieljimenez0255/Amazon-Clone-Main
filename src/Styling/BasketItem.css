@@ -1,0 +1,20 @@
+.basketItem {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.basketItem__image {
+  object-fit: contain;
+  width: 200px;
+}
+
+.basketItem__info {
+  flex: 1;
+  border: 1px solid red;
+}
+
+.basketItem__rating {
+  display: flex;
+  align-items: center;
+}

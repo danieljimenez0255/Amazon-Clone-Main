@@ -2,16 +2,27 @@
   display: flex;
   width: 100%;
   padding: 20px;
+  margin: 10px 0 10px 40px;
 }
 
 .basketItem__image {
   object-fit: contain;
   width: 200px;
+  flex-basis: 20%;
 }
 
 .basketItem__info {
-  flex: 1;
-  border: 1px solid red;
+  flex-basis: 40%;
+  margin-left: 40px;
+  /* border: 1px solid red; */
+}
+
+.basketItem__info > button {
+  background: #f0c14b;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
 }
 
 .basketItem__rating {

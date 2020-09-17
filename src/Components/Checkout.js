@@ -5,7 +5,7 @@ import BasketItem from "./BasketItem";
 import { useStateValue } from "../StateProvider";
 
 const Checkout = () => {
-  const [{ basket }] = useStateValue();
+  const [{ basket, loginEmail: email }] = useStateValue();
   return (
     <div className="checkout">
       <div className="checkout__left">
@@ -16,15 +16,18 @@ const Checkout = () => {
         />
 
         <div className="checkout__itemContainer">
+          <h3>{email}</h3>
           <h2 className="checkout__title">Your Shopping Basket</h2>
           <div className="checkout__itemContainerItems">
             {basket?.length > 0 ? (
               basket.map((item) => (
                 <BasketItem
+                  key={Math.random() * 300}
                   basketImage={item.image}
                   itemTitle={item.title}
                   itemPrice={item.price}
                   itemRating={item.rating}
+                  itemId={item.id}
                 />
               ))
             ) : (

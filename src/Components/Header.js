@@ -22,8 +22,8 @@ const Header = ({ cAniState }) => {
 
   return (
     <Flipper flipKey={cAniState}>
-      <Flipped flipId="smoothHeader" stagger="header-bg">
-        <div className={cAniState ? "header" : "header__start"}>
+      <Flipped flipId="smoothHeader">
+        <div className={cAniState ? "header" : ""}>
           <Link to="/">
             <Flipped
               flipId="smoothImg"
@@ -76,12 +76,16 @@ const Header = ({ cAniState }) => {
               stagger="header-item"
               delayUntil="smoothHeader"
             >
-              <div
-                className={cAniState ? "header__option" : "header__optionStart"}
-              >
-                <span className="header__optionLineOne">Returns</span>
-                <span className="header__optionLineTwo">& orders</span>
-              </div>
+              <Link to="/orders">
+                <div
+                  className={
+                    cAniState ? "header__option" : "header__optionStart"
+                  }
+                >
+                  <span className="header__optionLineOne">Returns</span>
+                  <span className="header__optionLineTwo">& orders</span>
+                </div>
+              </Link>
             </Flipped>
             <Flipped
               flipId="smoothPrime"

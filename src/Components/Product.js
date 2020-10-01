@@ -65,7 +65,7 @@ const Product = ({ title, image, price, rating, index }) => {
             <strong>{price}</strong>
           </p>
         </Flipped>
-        <Flipped flipId={`productStar-${Math.random() * 100}`}>
+        <Flipped flipId={`productStar-${index}`}>
           <div className="product__rating">
             {Array.from({ length: rating }, () => (
               <span

@@ -8,6 +8,7 @@ const BasketItem = ({
   itemPrice,
   itemRating,
   itemId,
+  hideButton,
 }) => {
   const [{ basket }, dispatch] = useStateValue();
   let basketCopy = [...basket];
@@ -36,9 +37,11 @@ const BasketItem = ({
             <p>🌟</p>
           ))}
         </div>
-        <button type="button" onClick={() => removeFromBasket(itemId)}>
-          Remove from basket
-        </button>
+        {!hideButton && (
+          <button type="button" onClick={() => removeFromBasket(itemId)}>
+            Remove from basket
+          </button>
+        )}
       </div>
     </div>
   );

@@ -16,7 +16,11 @@ const Checkout = () => {
         />
 
         <div className="checkout__itemContainer">
-          <h3>{email}</h3>
+          {email !== "Hello Guest" ? (
+            <h1 style={{ marginLeft: "8px" }}>Hello {email}</h1>
+          ) : (
+            <h1 style={{ marginLeft: "8px" }}>{email}</h1>
+          )}
           <h2 className="checkout__title">Your Shopping Basket</h2>
           <div className="checkout__itemContainerItems">
             {basket?.length > 0 ? (
@@ -31,7 +35,7 @@ const Checkout = () => {
                 />
               ))
             ) : (
-              <h2>Basket is empty</h2>
+              <h2 style={{ marginLeft: "8px" }}>Basket is empty</h2>
             )}
           </div>
         </div>

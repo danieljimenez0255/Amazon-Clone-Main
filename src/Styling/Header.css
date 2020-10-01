@@ -69,6 +69,7 @@
   justify-content: space-evenly;
 }
 
+/* header options animations */
 .header__optionStart {
   display: none;
 }
